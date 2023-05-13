@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2023 at 08:22 AM
+-- Generation Time: May 13, 2023 at 10:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -34,14 +34,6 @@ CREATE TABLE `auth_activation_attempts` (
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `auth_activation_attempts`
---
-
-INSERT INTO `auth_activation_attempts` (`id`, `ip_address`, `user_agent`, `token`, `created_at`) VALUES
-(2, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.61', 'f0464dc4cc59168f22dbbc7aa3c3829d', '2023-01-25 06:31:44'),
-(3, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36', 'add2406e42c1b45069338993ca536c25', '2023-01-25 06:33:14');
 
 -- --------------------------------------------------------
 
@@ -99,22 +91,6 @@ CREATE TABLE `auth_logins` (
   `date` datetime NOT NULL,
   `success` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `auth_logins`
---
-
-INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `success`) VALUES
-(2, '::1', 'wahyuwidiantoro82@gmail.com', 4, '2023-01-25 04:39:36', 1),
-(3, '::1', 'wahyuwidiantoro83@gmail.com', 9, '2023-01-25 06:28:58', 1),
-(4, '::1', 'wahyuwidiantoro83@gmail.com', 10, '2023-01-27 01:02:49', 1),
-(5, '::1', 'wahyuwidiantoro83@gmail.com', 10, '2023-01-27 01:04:37', 1),
-(6, '::1', 'wahyuwidiantoro83@gmail.com', 10, '2023-01-27 01:08:02', 1),
-(7, '::1', 'admin', NULL, '2023-04-06 06:15:27', 0),
-(8, '::1', 'wahyu', NULL, '2023-04-06 06:15:31', 0),
-(9, '::1', 'wahyuwidiantoro83@gmail.com', 10, '2023-04-06 06:16:06', 1),
-(10, '::1', 'admin', NULL, '2023-05-13 04:49:31', 0),
-(11, '::1', 'admin@gmail.com', 12, '2023-05-13 04:56:07', 1);
 
 -- --------------------------------------------------------
 
@@ -192,13 +168,6 @@ CREATE TABLE `books` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `books`
---
-
-INSERT INTO `books` (`id`, `judul`, `slug`, `penulis`, `penerbit`, `sampul`, `created_at`, `updated_at`) VALUES
-(11, 'Buku Bukuan', 'buku-bukuan', 'Wahyu Widiantoro', 'Wahyu Widiantoro', '1683957738_2104d284a1e143e9d8ed.jpg', '2023-05-13 06:02:18', '2023-05-13 06:02:18');
 
 -- --------------------------------------------------------
 
@@ -486,7 +455,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
